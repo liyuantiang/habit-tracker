@@ -1,3 +1,83 @@
+/* 1.Whole page */
+body {
+  font-family: cursive, sans-serif;
+  background-color: #f1f3f5;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 2.Title */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* 3.Input Area */
+.add-task {
+  display: flex; /* input field & button in one row */
+  gap: 8px; /* space between input field and button */
+  margin-bottom: 10px;
+}
+
+#task-input {
+  flex: 1; /* input field占满剩下的所有空间 */
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #d5d2d2;
+  border-radius: 6px;
+}
+
+#add-btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #51bb55;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: #43a047;
+}
+
+/* 4.Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-list span {
+  cursor: pointer;
+}
+
+/* 5.Delete Button */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* 6.Completed Tasks */
 .completed span {
   text-decoration: line-through;
   color: gray;
