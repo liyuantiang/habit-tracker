@@ -7,15 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My To-Do List</h1>
-  
-  <div class="add-task">
-    <input type="text" id="task-input" placeholder="Add a new task...">
-    <button id="add-btn">Add</button>
+  <h1>My Planner</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="todo-section">To-Do</button>
+    <button class="tab-btn" data-tab="habit-section">Habits</button>
   </div>
 
-  <ul id="task-list"></ul>
-  
+  <!-- To-Do Tab -->
+  <section id="todo-section" class="tab-content active">
+    <div class="add-task">
+      <input type="text" id="task-input" placeholder="Add a new task...">
+      <button id="add-btn">Add</button>
+    </div>
+    <ul id="task-list"></ul>
+  </section>
+
+  <!-- Habit Tab -->
+  <section id="habit-section" class="tab-content">
+  <div class="add-task">
+    <input type="text" id="habit-input" placeholder="Add a new habit...">
+    <button id="add-habit-btn">Add</button>
+  </div>
+  <ul id="habit-list"></ul>
+  </section>
+
   <script src="script.js"></script>
 </body>
-</html>

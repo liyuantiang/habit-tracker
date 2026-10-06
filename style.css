@@ -82,3 +82,92 @@ h1 {
   text-decoration: line-through;
   color: gray;
 }
+
+/* 7.Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: #88bae0;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Habits */
+#habit-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#add-habit-btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#habit-list {
+  list-style: none;
+  padding: 0;
+}
+
+#habit-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.habit-info small {
+  display: block;
+  color: #888;
+  margin-top: 4px;
+}
+
+.habit-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.check-btn {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.check-btn.done {
+  background-color: #4caf50;
+  color: white;
+}
