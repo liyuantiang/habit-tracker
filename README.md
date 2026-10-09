@@ -5,8 +5,8 @@ Built with vanilla HTML, CSS, and JavaScript.
 
 ## Screenshots
 
-![To-Do tab](screenshots/todo.png)
-![Habits tab](screenshots/habit.png)
+![To-Do tab](screenshot/todo.png)
+![Habits tab](screenshot/habit.png)
 
 ## Features
 
@@ -32,8 +32,6 @@ Built with vanilla HTML, CSS, and JavaScript.
 
 2. Open the folder in VS Code.
 3. Open `index.html` with Live Server (or double-click it in your browser).
-
-## What I Learned
 
 ## What I Learned
 
