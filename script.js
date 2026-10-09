@@ -108,7 +108,7 @@ const habitList = document.getElementById("habit-list");
 
 let habits = [];
 
-// 取得某天的日期字符串，Format:"YYYY-MM-DD"
+//Format:"YYYY-MM-DD"
 function formatDate(date) {
   const y = date.getFullYear();
   const m = String(date.getMonth() + 1).padStart(2, "0");
@@ -127,10 +127,10 @@ function loadHabits() {
   }
 }
 
-// 计算连续天数：从今天往回数
+//Streak 计算连续天数：从今天往回数
 function calculateStreak(completedDates) {
   let streak = 0;
-  const day = new Date();
+  const day = new Date(); //今天的日期
 
   // 如果今天还没打卡，从昨天开始数（今天还有机会）
   if (!completedDates.includes(formatDate(day))) {
