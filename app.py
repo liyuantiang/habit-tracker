@@ -1,8 +1,10 @@
 from flask import Flask, jsonify #python list->JSON, so Js can read it
 #import the Flask class-blueprint 4 create a web app
+from database import get_connection, init_db
 
 app = Flask(__name__)
 #create a website server, and save in variable
+init_db() # Initialize the database
 
 #when user goes to the home page, run the function below
 @app.route("/") #@=decorator, route=URL, /=home page
@@ -15,12 +17,19 @@ def about():
 
 @app.route("/tasks")
 def get_tasks():
-    tasks = [
-        {"id": 1, "text": "Buy groceries", "completed": False},
-        {"id": 2, "text": "Walk the dog", "completed": True},
-        {"id":3, "text":"Building my project", "completed":False},
-    ] #each task has an id, text, and completed status
-    #[{},{},...]: Pythonlist of dictionaries
+    conn = get_connection()
+    rows = conn.execute("SELECT * FROM tasks").fetchall()
+    conn.close()
+
+    tasks = []
+    for row in rows:
+        tasks.append({
+            "id": row["id"],
+            "text": row["text"],
+            "completed": bool(row["completed"])
+        })
+        #each task has an id, text, and completed status
+        #[{},{},...]: Pythonlist of dictionaries
     return jsonify(tasks) #return the tasks in JSON format
 
 @app.route("/habits")
